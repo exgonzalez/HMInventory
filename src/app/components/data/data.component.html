@@ -1,1 +1,79 @@
-<p>data works!</p>
+<br/>
+<div class="container">
+	<div class="row justify-content-center align-items-center g-2">
+		<div class="col">
+
+      <div>
+        <span>
+        DISPOSITIVOS
+        </span>
+      </div>
+
+      <br>
+
+      		<!--Formulario para carga de datos-->
+      <form class="row g-3 needs-validation" novalidate>
+
+          <div class="col-md-1">
+            <label for="validationCustom01" class="form-label">No_EQUIPO</label>
+            <input type="text" class="form-control" id="validationDevice1" value="" disabled>
+          </div>
+          <div class="col-md-2">
+            <label for="validationCustom02" class="form-label">NS</label>
+            <input type="text" class="form-control" id="validationDevice2" value="" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="" class="form-label">Tipo Equipo</label>
+            <select class="form-select" name="typeDevice" id="typeDevice">
+              <option *ngFor="let item of typeDevicesObj" value="item">{{item}}</option>
+            </select>
+          </div>
+
+          Detalle de Equipo
+
+          <div class="col-md-3">
+            <label for="validationCustom03" class="form-label">Procesador</label>
+            <input type="text" class="form-control" id="validationCustom03" required>
+          </div>
+          <div class="col-md-2">
+            <label for="validationCustom04" class="form-label">Almacenamiento</label>
+            <input type="text" class="form-control" id="validationCustom04" required>
+            <small id="helpId4" class="text-muted">Nombre | Capacidad | Velocidad</small>
+          </div>
+          <div class="col-md-2">
+            <div class="mb-3">
+              <label for="" class="form-label">RAM</label>
+              <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+            </div>
+          </div>
+        <div class="col-12">
+          <button (click)="uploadData()" class="btn btn-primary">CARGAR</button>
+        </div>
+      </form>
+
+
+
+
+
+
+				<!-- NS
+No_Equipo
+Clase
+Detalle_Equipo[NS, Marca, Modelo, Tipo_Equipo, Procesador, Almacenamiento, RAM [ ], Lector_Optico, Status]
+Other_Devices [Teclado, Mouse, UPS, Monitor, Cargador*Si es Laptop]
+Ubicación [Departamento, No_Bodega]
+Detalle_Usuario[Usuario, contraseña, correo)
+Garantia [ F_Inicio, F_Fin, Estado, Detalle]
+Año Compra
+Proveedor
+TS
+Observaciones
+-->
+
+
+		</div>
+	</div>
+</div>
